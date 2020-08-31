@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flask test</title>
+        <link rel="stylesheet" href="static/styles.css" type="text/css">
+    </head>
+    <body>
+        <div id="buttons">
+            <div id="onoff">
+                <button id="on" class="on" onclick="window.location='/on'">on</button>
+                <button id="off" class="off" onclick="window.location='/off'">off</button>
+            </div>
+            <button id="toggle" class="{%if on%}off{%else%}on{%endif%}" onclick="window.location='/toggle'">toggle {%if on%}off{%else%}on{%endif%}</button>
+        </div>
+    </body>
+</html>

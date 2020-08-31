@@ -1,0 +1,49 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    background: black;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#buttons{
+    display: inline-block;
+    background: gray;
+    border-radius: 10px;
+}
+
+#buttons button{
+    border-radius: 10px;
+    font-size: 100px;
+}
+
+#onoff{
+    padding: 10px;
+}
+
+#on, #off{
+    width: 40vw;
+    padding: 10px;
+    height: 40vh;
+}
+
+.on{
+    background-color: green;
+}
+
+.off{
+    background-color: red;
+}
+
+#toggle{
+    width: 80vw;
+    height: 40vh;
+    margin: 10px;
+}
