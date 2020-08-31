@@ -6,11 +6,13 @@
     </head>
     <body>
         <div id="buttons">
-            <div id="onoff">
-                <button id="on" class="on" onclick="window.location='/on'">on</button>
-                <button id="off" class="off" onclick="window.location='/off'">off</button>
-            </div>
-            <button id="toggle" class="{%if on%}off{%else%}on{%endif%}" onclick="window.location='/toggle'">toggle {%if on%}off{%else%}on{%endif%}</button>
+            <form method="POST" action="/">
+                <div id="onoff">
+                    <button type="submit" id="on" name='btn' value='on' class="on">on</button>
+                    <button type="submit" id="off" name='btn' value='off' class="off">off</button>
+                </div>
+                <button type="submit" id="toggle" name='btn' value='toggle' class="{%if on%}off{%else%}on{%endif%}">toggle {%if on%}off{%else%}on{%endif%}</button>
+            </form>
         </div>
     </body>
 </html>
