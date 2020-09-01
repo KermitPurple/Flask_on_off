@@ -16,11 +16,11 @@ def index():
             on = False
         elif request.form['btn'] == 'toggle':
             on = not on
-        if on:
-            brightness = '1'
-        else:
-            brightness = '0'
-        os.system(f"echo {brightness} | sudo tee /sys/class/leds/led0/brightness")
+    if on:
+        brightness = '1'
+    else:
+        brightness = '0'
+    os.system(f"echo {brightness} | sudo tee /sys/class/leds/led0/brightness")
     return render_template('index.html', on = on)
 
 @app.route('/test/<string:var>')
