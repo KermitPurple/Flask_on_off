@@ -20,16 +20,8 @@ def index():
         brightness = '1'
     else:
         brightness = '0'
-    os.system(f"echo {brightness} | sudo tee /sys/class/leds/led0/brightness")
+    os.system(f"echo {brightness} | sudo tee /sys/class/leds/led0/brightness") # change light to brightness
     return render_template('index.html', on = on)
-
-@app.route('/test/<string:var>')
-def test_world(var):
-    return 'test, World! %s' % escape(var)
-
-@app.route('/template/<name>')
-def test_template(name):
-    return render_template('name_template.html', name=name)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
